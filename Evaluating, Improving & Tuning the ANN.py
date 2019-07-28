@@ -127,7 +127,7 @@ mean2 = accuracies.mean()
 std2 = accuracies.std()
 
 
-# Using Grid Search to get best parameters for our NN
+# Using Grid Search to get best parameters for our ANN
 from sklearn.model_selection import GridSearchCV
 from keras.layers import Dropout
 
@@ -162,6 +162,11 @@ gridsearch = gridsearch.fit(X_train, y_train)
 # The above grid search takes up a huge time as we have 10fold cv in addition to gridsearch... so give it time and then check the following parameters
 best_parameters = gridsearch.best_params_
 best_accuracy = gridsearch.best_score_
+
+#We got our best score with the following parameters:
+# Batch size of 25
+# Epochs of 500 and
+# adam optimizer worked best for us than the conventional rmsprop
 
 
 
