@@ -160,8 +160,8 @@ gridsearch = GridSearchCV( estimator = classifier,
 gridsearch = gridsearch.fit(X_train, y_train)
 
 # The above grid search takes up a huge time as we have 10fold cv in addition to gridsearch... so give it time and then check the following parameters
-best_parameters = grid_search.best_params_
-best_accuracy = grid_search.best_score_
+best_parameters = gridsearch.best_params_
+best_accuracy = gridsearch.best_score_
 
 
 
